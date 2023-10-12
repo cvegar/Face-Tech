@@ -1,0 +1,17 @@
+{
+  "name": "entel-facetec-plugin",
+  "version": "0.0.1",
+  "description": "Entel facetec scan validation.",
+  "cordova": {
+    "id": "entel-facetec-plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "NTTDATA - Bruno Blanco",
+  "license": "MIT"
+}

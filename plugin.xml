@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="entel-facetec-plugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>EntelFacetecPlugin</name>
+
+    <description>Entel Facetec Plugin</description>
+    <licence>MIT</licence>
+
+    <engines>
+        <engine name="cordova" version=">=7.1.0" />
+    </engines>
+
+    <js-module name="entelFacetecPlugin" src="www/entelFacetecPlugin.js">
+        <clobbers target="windows.plugins.entelFacetecPlugin" />
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="EntelFacetecPlugin">
+                <param name="android-package" value="com.outsystemsenterprise.entel.PEMiEntel.cordova.plugin.EntelFacetecPlugin" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.CAMERA" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="application">
+            <activity android:name="com.outsystemsenterprise.entel.PEMiEntel.cordova.plugin.FacetecActivity" android:theme="@style/AppTheme"></activity>
+        </config-file>
+
+        <config-file target="res/values/strings.xml" parent="/*">
+            <string name="FaceTec_accessibility_cancel_button">Cancelar</string>
+            <string name="FaceTec_accessibility_torch_button">Alternar luz</string>
+            <string name="FaceTec_action_accept_photo">ACEPTAR</string>
+            <string name="FaceTec_action_im_ready">ESTOY LISTO</string>
+            <string name="FaceTec_action_ok">OK</string>
+            <string name="FaceTec_action_retake_photo">RETOMAR</string>
+            <string name="FaceTec_action_select_id_card">FOTO ID</string>
+            <string name="FaceTec_action_select_passport">DNI</string>
+            <string name="FaceTec_action_take_photo">TOMAR FOTO</string>
+            <string name="FaceTec_action_confirm">Confirmar Información</string>
+            <string name="FaceTec_action_continue">Continuar</string>
+            <string name="FaceTec_action_try_again">Intentar Nuevamente</string>
+            <string name="FaceTec_camera_permission_enable_camera">Acceso a tu cámara</string>
+            <string name="FaceTec_camera_permission_header">Habilitar Camara</string>
+            <string name="FaceTec_camera_permission_launch_settings">AJUSTES DE INICIO</string>
+            <string name="FaceTec_camera_permission_message_auth">Los permisos de su cámara están desactivados. Toque a continuación para editar su configuración.</string>
+            <string name="FaceTec_camera_permission_message_enroll">Permite el acceso a tu\ncámara para la validación.</string>
+            <string name="FaceTec_feedback_center_face">Centre su rostro</string>
+            <string name="FaceTec_feedback_face_not_found">Enmarca tu rostro</string>
+            <string name="FaceTec_feedback_face_not_looking_straight_ahead">Mira hacia adelante</string>
+            <string name="FaceTec_feedback_face_not_upright">Mantenga su cabeza recta</string>
+            <string name="FaceTec_feedback_hold_steady">Manténgase estable</string>
+            <string name="FaceTec_feedback_move_phone_away">Aléjese</string>
+            <string name="FaceTec_feedback_move_phone_closer">Acérquese</string>
+            <string name="FaceTec_feedback_move_phone_even_closer">Mas cerca</string>
+            <string name="FaceTec_feedback_move_phone_to_eye_level">Levante la cámara al nivel de los ojos</string>
+            <string name="FaceTec_feedback_use_even_lighting">Rostro más claro de manera más uniforme</string>
+            <string name="FaceTec_idscan_capture_hold_steady_message">Por favor, manténgase firme</string>
+            <string name="FaceTec_idscan_capture_id_card_back_instruction_message">Muestre el reverso de su DNI</string>
+            <string name="FaceTec_idscan_capture_id_back_instruction_message">Muestre el reverso de su DNI</string>
+            <string name="FaceTec_idscan_capture_id_card_front_instruction_message">Muestre el anverso de su DNI</string>
+            <string name="FaceTec_idscan_capture_id_front_instruction_message">Muestre el anverso de su DNI</string>
+            <string name="FaceTec_idscan_capture_passport_instruction_message">Muestre la foto de su DNI</string>
+            <string name="FaceTec_idscan_capture_tap_to_focus_message">Toque la pantalla para enfocar</string>
+            <string name="FaceTec_idscan_review_id_card_back_instruction_message">Confirmar que la foto es clara &amp; legible</string>
+            <string name="FaceTec_idscan_review_id_card_front_instruction_message">Confirmar que la foto es clara &amp; legible</string>
+            <string name="FaceTec_idscan_review_id_back_instruction_message">Confirmar que la foto es clara &amp; legible</string>
+            <string name="FaceTec_idscan_review_id_front_instruction_message">Confirmar que la foto es clara &amp; legible</string>
+            <string name="FaceTec_idscan_review_passport_instruction_message">Confirmar que la foto es clara &amp; legible</string>
+            <string name="FaceTec_idscan_type_selection_header">Por favor seleccione su\n tipo de documento</string>
+            <string name="FaceTec_idscan_ocr_confirmation_main_header">Revisar y Confirmar</string>
+            <string name="FaceTec_instructions_header_ready">¿Estás listo para empezar?</string>
+            <string name="FaceTec_instructions_header_ready_1">¿Estás listo para</string>
+            <string name="FaceTec_instructions_header_ready_2">tu selfie video?</string>
+            <string name="FaceTec_instructions_message_ready">Por favor enmarca tu rostro en\nel óvalo pequeño, luego en el óvalo grande</string>
+            <string name="FaceTec_instructions_message_ready_1">Enmarque su rostro en el ovalo,</string>
+            <string name="FaceTec_instructions_message_ready_2">Presione estoy listo &amp; Acérquese lentamente</string>
+            <string name="FaceTec_internal_dev_mode_tag">Esta app es una DEMO de Insolutions SAC</string>
+            <string name="FaceTec_result_facescan_upload_message">Subiendo\nEncriptado 3D</string>
+            <string name="FaceTec_presession_brighten_your_environment">Poca iluminación</string>
+            <string name="FaceTec_presession_conditions_too_bright">Entorno demasiado brillante</string>
+            <string name="FaceTec_presession_eyes_straight_ahead">Mire de frente</string>
+            <string name="FaceTec_presession_frame_your_face">Enmarque Su Rostro En El Ovalo</string>
+            <string name="FaceTec_presession_hold_steady_1">Manténganse firme durante: 1</string>
+            <string name="FaceTec_presession_hold_steady_2">Manténganse firme durante: 2</string>
+            <string name="FaceTec_presession_hold_steady_3">Manténganse firme durante: 3</string>
+            <string name="FaceTec_presession_neutral_expression">Expresión neutral, no sonría</string>
+            <string name="FaceTec_presession_position_face_straight_in_oval">Mire de frente</string>
+            <string name="FaceTec_presession_remove_dark_glasses">Retire sus lentes oscuros</string>
+            <string name="FaceTec_result_idscan_unsuccess_message">Foto ID \nNo Emparejó\ncon su rostro</string>
+            <string name="FaceTec_result_idscan_upload_message">Subiendo\nEncriptado</string>
+            <string name="FaceTec_result_idscan_retry_face_did_not_match_message">Su Rostro No Coincide Lo Suficiente</string>
+            <string name="FaceTec_result_idscan_retry_id_not_fully_visible_message">Documento ID\nNo Es Totalmente Visible</string>
+            <string name="FaceTec_result_idscan_retry_ocr_results_not_good_enough_message">El Texto Del ID No Es Legible</string>
+            <string name="FaceTec_result_idscan_success_back_side_message">Reverso del DNI Capturado</string>
+            <string name="FaceTec_result_idscan_success_front_side_back_next_message">Su Rostro 3D\nCoincidió con su ID</string>
+            <string name="FaceTec_result_idscan_success_front_side_message">Su Rostro 3D\nCoincidió con su ID</string>
+            <string name="FaceTec_result_idscan_success_user_confirmation_message">Verificación del ID Completado</string>
+            <string name="FaceTec_result_success_message">Éxito</string>
+            <string name="FaceTec_retry_header">Intentaré otra vez</string>
+            <string name="FaceTec_retry_ideal_image_label">Pose ideal</string>
+            <string name="FaceTec_retry_instruction_message_1">Expresión neutral, no sonría</string>
+            <string name="FaceTec_retry_instruction_message_2">Evite iluminación extrema.</string>
+            <string name="FaceTec_retry_instruction_message_3" />
+            <string name="FaceTec_retry_subheader_message">Eche un vistazo a su foto.</string>
+            <string name="FaceTec_retry_your_image_label">Tu Selfi</string>
+            <string name="facetec_sdk_icon_attention_fill" translatable="false">\ue901</string>
+            <string name="facetec_sdk_icon_camera_fill" translatable="false">\ue900</string>
+            <string name="facetec_sdk_icon_caution" translatable="false">\ue908</string>
+            <string name="facetec_sdk_icon_check" translatable="false">\ue66c</string>
+            <string name="facetec_sdk_icon_close" translatable="false">\ue680</string>
+            <string name="facetec_sdk_icon_close_circle" translatable="false">\ue681</string>
+            <string name="facetec_sdk_icon_close_circle_fill" translatable="false">\ue902</string>
+            <string name="facetec_sdk_icon_fingerprint" translatable="false">\ue6cb</string>
+            <string name="facetec_sdk_icon_icon_unlock" translatable="false">\ue6ce</string>
+            <string name="facetec_sdk_icon_info" translatable="false">\ue647</string>
+            <string name="facetec_sdk_icon_keypad" translatable="false">\ue645</string>
+            <string name="facetec_sdk_icon_left" translatable="false">\ue686</string>
+            <string name="facetec_sdk_icon_light" translatable="false">\ue90c</string>
+            <string name="facetec_sdk_icon_light_fill" translatable="false">\ue90d</string>
+            <string name="facetec_sdk_icon_lock" translatable="false">\ue6cc</string>
+            <string name="facetec_sdk_icon_mid_enroll_glasses" translatable="false">\ue914</string>
+            <string name="facetec_sdk_icon_moon" translatable="false">\ue90e</string>
+            <string name="facetec_sdk_icon_moon_fill" translatable="false">\ue90f</string>
+            <string name="facetec_sdk_icon_one_circle" translatable="false">\ue903</string>
+            <string name="facetec_sdk_icon_phone_check_fill" translatable="false">\ue909</string>
+            <string name="facetec_sdk_icon_phone_zoom" translatable="false">\ue917</string>
+            <string name="facetec_sdk_icon_redo" translatable="false">ue910</string>
+            <string name="facetec_sdk_icon_selfie" translatable="false">\ue666</string>
+            <string name="facetec_sdk_icon_settings" translatable="false">\ue6d9</string>
+            <string name="facetec_sdk_icon_three_circle" translatable="false">\ue905</string>
+            <string name="facetec_sdk_icon_thumbs_up_fill" translatable="false">\ue907</string>
+            <string name="facetec_sdk_icon_two_circle" translatable="false">\ue904</string>
+            <string name="facetec_sdk_icon_undetermined" translatable="false">\ue91a</string>
+            <string name="facetec_sdk_icon_user_alert" translatable="false">\ue928</string>
+            <string name="facetec_sdk_icon_user_fail_fill" translatable="false">\ue906</string>
+            <string name="facetec_sdk_icon_user_retry" translatable="false">\ue911</string>
+            <string name="facetec_sdk_icon_wifi_icon" translatable="false">\ue925</string>
+            <string name="facetec_sdk_icon_zoom_logo_dev" translatable="false">\ue923</string>
+            <string name="facetec_sdk_icon_zoom_logo_prod" translatable="false">\ue921</string>
+        </config-file>
+
+        <resource-file src="src/android/res/values/styles.xml" target="res/values/styles.xml" />
+        <resource-file src="src/android/res/values/colors.xml" target="res/values/colors.xml" />
+        <resource-file src="src/android/res/layout/activity_facetec.xml" target="res/layout/activity_facetec.xml" />
+
+        <resource-file src="src/android/res/drawable/entel_logo_pe.png" target="res/drawable/entel_logo_pe.png" />
+
+        <framework src="src/android/dependencies.gradle" custom="true" type="gradleReference" />
+
+        <source-file src="src/android/EntelFacetecPlugin.java" target-dir="src/com/outsystemsenterprise/entel/PEMiEntel/cordova/plugin" />
+        <source-file src="src/android/FacetecActivity.java" target-dir="src/com/outsystemsenterprise/entel/PEMiEntel/cordova/plugin" />
+        <source-file src="src/android/PhotoIDMatchProcessor.java" target-dir="src/com/outsystemsenterprise/entel/PEMiEntel/cordova/plugin" />
+        <source-file src="src/android/Config.java" target-dir="src/com/outsystemsenterprise/entel/PEMiEntel/cordova/plugin" />
+        <source-file src="src/android/Processor.java" target-dir="src/com/outsystemsenterprise/entel/PEMiEntel/cordova/plugin" />
+        <source-file src="src/android/Shared.java" target-dir="src/com/outsystemsenterprise/entel/PEMiEntel/cordova/plugin" />
+
+        <lib-file src="src/android/libs/facetec-sdk-9.4.13.aar" />
+
+    </platform>
+</plugin>
